@@ -11,12 +11,15 @@
 function chunk(array, size) {
     const chunkArray = [];
     for (let e of array) {
+        console.log('e', e);
         const last = chunkArray[chunkArray.length - 1];
         console.log('last', last);
         if (!last || last.length === size) {
             chunkArray.push([e]);
+            console.log('chunkArray1', chunkArray);
         } else {
             last.push(e);
+            console.log('chunkArray2', chunkArray);
         }
     }
     return chunkArray;
